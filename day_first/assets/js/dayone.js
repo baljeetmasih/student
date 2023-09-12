@@ -28,7 +28,7 @@
 // let a = prompt("Please enter your age..")
 // alert(a)
 
-// 5 dom mainuplation 
+// 5 dom mainuplation // write a html code using js 
 
 // console.log(document.body)
 
