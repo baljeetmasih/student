@@ -44,6 +44,12 @@ list[0].addEventListener("click", ()=>{
     list[0].classList.toggle("kamal")
 })
 
+
+// let heading = document.querySelector('.heading')
+// heading.outerHTML = '<h3 class="heading">Assessing Elements</h3>' 
+
+// console.log(heading.textContent)
+
 // console.log(list[0].classList.toggle("kamal"))
 
 
@@ -69,3 +75,133 @@ list[0].addEventListener("click", ()=>{
 // })
 
 
+
+// create element with the help of js
+
+// let createElement  = document.createElement("h1")
+// let body = document.body
+
+// createElement.className = "xyz"
+// createElement.textContent = "sdfsdfsdf"
+
+// document.body.appendChild = createElement
+
+
+
+
+/// events 
+
+
+
+let heading  = document.querySelector('.heading');
+
+//Focus
+//Inputs
+
+// mouse event 
+    // click
+    // mouseover
+    // mouseout
+    // mousedown
+    // mouseup
+    // mousemove
+
+// Keyboard events:
+    // Keydown 
+    // Keyup
+    // change
+
+// Event Performed	
+    // focus
+    // submit
+    // blur
+    // change
+// Event Performed	
+    // load
+    // unload	
+    // resize
+
+let init = heading.innerHTML
+
+let input = document.querySelector('input[id="xyz"]')
+
+let select = document.querySelector('#select')
+
+let popup = document.querySelector('.popup')
+// input.addEventListener("keyup",function(){
+//     console.log("keyup")
+// })
+
+// input.addEventListener("keydown",function(){
+//     console.log("keydown")
+// })
+
+
+select.addEventListener("change",function(e){
+    let val = e.target.value
+
+    if(val == 2004 || val == 2005){
+        popup.style.display = 'block'
+    }else{
+        popup.style.display = 'none'
+
+    }
+})
+
+// input.addEventListener("keyup",function(){
+//     console.log("keyup")
+// })
+
+// heading.addEventListener("mouseover", function(){
+//     heading.style.color = 'red'
+//     heading.innerHTML = init+' mouseover'
+// })
+
+// heading.addEventListener("mouseout", function(){
+//     heading.style.color = 'black'
+//     heading.innerHTML = init+' mouseout'
+// })
+
+// heading.addEventListener("mousedown", function(){
+//     heading.style.color = 'red'
+//     heading.innerHTML = init+' mousedown'
+// })
+
+// heading.addEventListener("mouseup", function(){
+//     heading.style.color = 'black'
+//     heading.innerHTML = init+' mouseup'
+// })
+
+// heading.addEventListener("mouseleave", function(){
+//         heading.style.color = 'red'
+//         heading.innerHTML = init+' mouseleave'
+// })
+    
+// heading.addEventListener("mouseenter", function(){
+//     heading.style.color = 'black'
+//     heading.innerHTML = init+' mouseenter'
+// })
+
+heading.addEventListener("mousemove", function(e){
+    console.log(e)
+    heading.style.color = 'black'
+    heading.innerHTML = init+' mouseenter'
+})
+
+
+document.body.onload = addElement;
+
+function addElement() {
+  // create a new div element
+  const newDiv = document.createElement("div");
+
+  // and give it some content
+  const newContent = document.createTextNode("Hi there and greetings!");
+
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
+}

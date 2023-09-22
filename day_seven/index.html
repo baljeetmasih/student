@@ -7,6 +7,12 @@
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
+    *
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     [fsdhfghgsdf="dsfgjgsdfs"] {
       color:red;
     }
@@ -16,11 +22,38 @@
     li.xyz.abcd.deep.kamal{
       background-color: green;
     }
+    .popup{
+      background-color: green;
+      height: 100px;
+      width: 100px;
+      display: none;
+    }
   </style>
 </head>
 
 <body>
-  <h2>Assessing Elements</h2>
+  <h2 class="heading">Assessing Elements</h2>
+
+
+  <input name="name" id="xyz" value="" />
+  <label>Choose Birth Year</label>
+  <select id="select">
+    <option value="">Select an option...</option>
+    <option value="2000">2000</option>
+    <option value="2001">2001</option>
+    <option value="2002">2002</option>
+    <option value="2003">2003</option>
+    <option value="2004">2004</option>
+    <option value="2005">2005</option>
+    <option value="2006">2006</option>
+    <option value="2007">2007</option>
+    <option value="2008">2008</option>
+  </select>
+
+  <div class="popup">
+    
+  </div>
+
   <ul>
     <li class="kamal xyz abcd" xyz1="abc">getElementById(id)</li>
     <li class="kamal"> querySelector()</li>
@@ -47,6 +80,14 @@
     <li class="abcd">classList.toggel()</li>
 
 
+  </ul>
+
+  <ul>
+    <li>Create/remove Elements </li>
+    <li>createElement('name')</li>
+      <li>createTextNode('text')</li>
+        <li>appendChild(node)</li>
+          <li>replaceChildNode(newnode,oldnode)  </li>
   </ul>
   <script src="./assets/js/index.js"></script>
 
